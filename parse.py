@@ -38,8 +38,12 @@ def parse(html):
 
 
 def main():
-    parse(get_html('http://shikimori.org/UltraKek/list/anime/mylist/completed/order-by/my'))  # вместо UltraKek свой ник
+    print('You shikimori nick here: ')
+    shikimori_nick = str(input())
+    print('Please, wait...')
+    parse(get_html('http://shikimori.org/' + shikimori_nick + '/list/anime/mylist/completed/order-by/my'))
 
 
 if __name__ == '__main__':
     main()
+    input()
